@@ -32,7 +32,16 @@ axios.post('http://localhost:3000/books', {
 });
 
 
+// Atividade 2
 axios.get('http://localhost:3000/books')
     .then((response) => {
+
         console.log(response.data);
+
+        response.data.forEach(livro => {
+            axios.get('http://localhost:3000/books/' + livro.ID).then((book) => {
+                console.log(book.data)
+            })
+        })
+
     });
