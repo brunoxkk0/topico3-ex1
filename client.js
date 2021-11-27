@@ -45,3 +45,8 @@ axios.get('http://localhost:3000/books')
         })
 
     });
+
+// Atividade 4
+axios.get('http://localhost:3000/log').then((response) => {
+    console.log(response)
+})
