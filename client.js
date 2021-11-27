@@ -21,6 +21,16 @@ axios.post('http://localhost:3000/books', {
     console.log(err.response.data);
 });
 
+axios.post('http://localhost:3000/books', {
+    ID: 4,
+    name: 'Novo Livro 2',
+    author: 'Desconhecido'
+}).then((res) => {
+    console.log(res.data);
+}).catch(err => {
+    console.log(err.response.data);
+});
+
 
 axios.get('http://localhost:3000/books')
     .then((response) => {
